@@ -17,7 +17,7 @@ class UserProvider with ChangeNotifier, ErrorHandling {
 
   Future<void> loadUser() async {
     _isLoading = true;
-    clearError();
+    clearError(false);
 
     try {
       _user = await _getUser.invoke();

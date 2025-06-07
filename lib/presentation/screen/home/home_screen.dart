@@ -36,7 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: CustomScrollView(
           slivers: [
             SliverFloatingHeader(
-              snapMode: FloatingHeaderSnapMode.scroll,
               child: MinimartAppBar(
                 showLeading: false,
                 bottom: MinimartSearchTextField(
@@ -45,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            const AutoRouter(),
+            const SliverFillRemaining(child: AutoRouter()),
           ],
         ),
       ),

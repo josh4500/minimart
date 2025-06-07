@@ -33,7 +33,8 @@ class MinimartButton extends StatelessWidget {
             return context.theme.appColors.selected;
           }),
         ),
-        child: Text(title),
+
+        child: Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
       ),
     );
   }

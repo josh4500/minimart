@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minimart/presentation/constants.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key});
@@ -6,7 +7,7 @@ class AppLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 72),
+      constraints: const BoxConstraints(maxWidth: AppValues.LOGO_SIZE),
       decoration: BoxDecoration(
         color: const Color(0xFF93C5FD),
         border: Border.all(color: const Color(0xFF548AF3)),

@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:minimart/presentation.dart';
-import 'package:minimart/presentation/themes.dart';
 import 'package:minimart/presentation/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -45,33 +44,31 @@ class _ProductListScreenState extends State<ProductListScreen> {
   @override
   Widget build(BuildContext context) {
     final products = context.watch<ProductProvider>().products;
-    return SliverMainAxisGroup(
-      slivers: [
-        if (widget.isSearchResults) MinimartBackButton(label: category),
-        DecoratedSliver(
-          decoration: const BoxDecoration(color: AppColors.grey100),
-          sliver: SliverMainAxisGroup(
-            slivers: [
-              if (subCategory != null && widget.isSearchResults)
-                SliverToBoxAdapter(child: Text(subCategory!)),
-              SliverPadding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                sliver: SliverGrid(
-                  delegate: SliverChildBuilderDelegate((
-                    BuildContext _,
-                    int index,
-                  ) {
-                    return ProductTile(product: products[index]);
-                  }, childCount: products.length),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 8,
-                    mainAxisSpacing: 8,
-                    childAspectRatio: 9 / 10,
-                  ),
-                ),
-              ),
-            ],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (widget.isSearchResults)
+          MinimartBackButton(key: ValueKey(category), label: category),
+        if (subCategory != null && widget.isSearchResults)
+          Padding(
+            key: ValueKey(subCategory),
+            padding: const EdgeInsets.all(16.0),
+            child: Text(subCategory!, style: const TextStyle(fontSize: 18)),
+          ),
+        Expanded(
+          child: GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            itemBuilder: (BuildContext _, int index) {
+              return ProductTile(product: products[index]);
+            },
+            itemCount: products.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+              childAspectRatio: 9 / 10,
+            ),
           ),
         ),
       ],

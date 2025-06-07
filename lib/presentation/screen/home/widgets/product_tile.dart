@@ -34,7 +34,7 @@ class ProductTile extends StatelessWidget {
                   color: style.bgColor,
                   borderRadius: BorderRadius.all(style.radius),
                 ),
-                child: CustomImage(image: NetworkImage(product.imageUrl)),
+                child: CustomImage(image: AssetImage(product.imageUrl)),
               ),
             ),
           ),

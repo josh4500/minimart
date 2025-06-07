@@ -29,15 +29,16 @@ class CustomImage extends StatelessWidget {
             ],
           );
         },
-        loadingBuilder: (_, Widget child, _) {
+        loadingBuilder: (_, Widget child, event) {
           return Stack(
             alignment: Alignment.center,
             children: [
               child,
-              const CircularProgressIndicator.adaptive(
-                strokeWidth: 2,
-                valueColor: AlwaysStoppedAnimation(AppColors.grey700),
-              ),
+              if (event?.cumulativeBytesLoaded != event?.expectedTotalBytes)
+                const CircularProgressIndicator.adaptive(
+                  strokeWidth: 2,
+                  valueColor: AlwaysStoppedAnimation(AppColors.grey700),
+                ),
             ],
           );
         },

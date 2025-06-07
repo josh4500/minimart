@@ -36,7 +36,7 @@ class ProductProvider with ChangeNotifier, ErrorHandling {
 
   Future<void> loadProducts() async {
     _isLoading = true;
-    clearError();
+    clearError(false);
 
     try {
       _products = await _fetchProducts.invoke();

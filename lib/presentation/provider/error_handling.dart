@@ -13,9 +13,9 @@ mixin ErrorHandling on ChangeNotifier {
     notifyListeners();
   }
 
-  void clearError() {
+  void clearError([bool notify = true]) {
     _error = null;
     _hasError = false;
-    notifyListeners();
+    if (notify) notifyListeners();
   }
 }

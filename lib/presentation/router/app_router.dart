@@ -11,10 +11,7 @@ class AppRouter extends RootStackRouter {
       children: [
         AutoRoute(
           page: HomeRoute.page,
-          children: [
-            AutoRoute(path: '', page: ProductListRoute.page),
-            AutoRoute(path: 'search', page: ProductListRoute.page),
-          ],
+          children: [AutoRoute(path: '', page: ProductListRoute.page)],
         ),
         AutoRoute(page: CartRoute.page),
       ],

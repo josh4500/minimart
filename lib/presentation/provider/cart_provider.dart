@@ -23,8 +23,7 @@ class CartProvider with ChangeNotifier, ErrorHandling {
 
   Future<void> loadCart() async {
     _isLoading = true;
-    clearError();
-    notifyListeners();
+    clearError(false);
 
     try {
       _cart = await _getCart.invoke();
@@ -64,7 +63,6 @@ class CartProvider with ChangeNotifier, ErrorHandling {
       if (currentItem != null) {
         final newQuantity = updateFn(currentItem.quantity);
         await _updateCart.invoke(product, newQuantity);
-
         // Reload cart to reflect changes
         await loadCart();
       }

@@ -199,9 +199,14 @@ class _FlushState extends State<Flush> with SingleTickerProviderStateMixin {
                   child: Row(
                     spacing: 12,
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(Icons.check_circle_outline),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.check_circle_outline,
+                          color: widget.isSuccess
+                              ? context.theme.appColors.success
+                              : context.theme.appColors.failure,
+                        ),
                       ),
                       Expanded(
                         child: Text(

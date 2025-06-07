@@ -51,9 +51,8 @@ class ProductDetailsScreen extends StatelessWidget {
                                         style.radius,
                                       ),
                                     ),
-                                    alignment: Alignment.center,
                                     child: CustomImage(
-                                      image: NetworkImage(product.imageUrl),
+                                      image: AssetImage(product.imageUrl),
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -61,21 +60,29 @@ class ProductDetailsScreen extends StatelessWidget {
                               ),
                               Align(
                                 alignment: Alignment.topRight,
-                                child: MinimartIconButton(
-                                  onTap: () {
-                                    context
-                                        .read<ProductProvider>()
-                                        .toggleFavorite(product);
+                                child: StatefulBuilder(
+                                  builder: (context, setState) {
+                                    return MinimartIconButton(
+                                      onTap: () {
+                                        context
+                                            .read<ProductProvider>()
+                                            .toggleFavorite(product);
+                                        setState(() {
+                                          product.isFavorite =
+                                              !product.isFavorite;
+                                        });
+                                      },
+                                      margin: const EdgeInsets.all(16.0),
+                                      icon: Icon(
+                                        product.isFavorite
+                                            ? MinimartIcons.fav_filled
+                                            : MinimartIcons.fav_outlined,
+                                        color: product.isFavorite
+                                            ? AppColors.pink
+                                            : AppColors.grey700,
+                                      ),
+                                    );
                                   },
-                                  margin: const EdgeInsets.all(16.0),
-                                  icon: Icon(
-                                    product.isFavorite
-                                        ? MinimartIcons.fav_filled
-                                        : MinimartIcons.fav_outlined,
-                                    color: product.isFavorite
-                                        ? AppColors.pink
-                                        : AppColors.grey700,
-                                  ),
                                 ),
                               ),
                             ],
@@ -102,11 +109,14 @@ class ProductDetailsScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 16),
-                        Text(
-                          product.description,
-                          style: style.descStyle,
-                          textAlign: TextAlign.start,
-                        ),
+                        for (final String line in product.description.split(
+                          '\n',
+                        ))
+                          Text(
+                            line,
+                            style: style.descStyle,
+                            textAlign: TextAlign.start,
+                          ),
                       ]),
                     ),
                   ),
@@ -116,7 +126,13 @@ class ProductDetailsScreen extends StatelessWidget {
             MinimartButton(
               enabled: product.inStock,
               title: S.of(context).addToCart,
-              onPressed: () => context.read<CartProvider>().addToCart(product),
+              onPressed: () {
+                context.read<CartProvider>().addToCart(product);
+                FlushbarOverlay.showSuccess(
+                  context,
+                  message: '${product.name} added to cart',
+                );
+              },
             ),
           ],
         ),

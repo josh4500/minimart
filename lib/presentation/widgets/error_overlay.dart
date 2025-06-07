@@ -20,8 +20,8 @@ mixin ErrorScreenMixin<T extends StatefulWidget> on State<T> {
   bool get clearOnDispose => true;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     _setupErrorListeners();
   }
 

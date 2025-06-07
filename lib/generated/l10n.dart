@@ -239,9 +239,9 @@ class S {
     );
   }
 
-  /// `Search`
+  /// `Search...`
   String get search {
-    return Intl.message('Search', name: 'search', desc: '', args: []);
+    return Intl.message('Search...', name: 'search', desc: '', args: []);
   }
 }
 

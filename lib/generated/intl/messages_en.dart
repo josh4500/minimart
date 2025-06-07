@@ -61,7 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Product not found",
     ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
+    "search": MessageLookupByLibrary.simpleMessage("Search..."),
     "searchFailed": MessageLookupByLibrary.simpleMessage("Search failed"),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),

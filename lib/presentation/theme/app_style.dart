@@ -28,7 +28,7 @@ abstract final class AppStyle {
           bgColor: AppColors.grey100,
           radius: const Radius.circular(12),
           descStyle: const TextStyle(
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: FontWeight.w500,
             color: AppColors.grey,
           ),

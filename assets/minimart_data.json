@@ -3,59 +3,62 @@
     {
       "id":  "1",
       "name":  "Apple iPhone 16 128GB|Teal",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 700.0,
       "category": "Technology",
-      "imageUrl":  "",
+      "imageUrl":  "assets/images/iphone.png",
       "isFavorite": false
     },{
       "id":  "2",
       "name":  "M4 Macbook Air 13 256GB|Sky blue",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 1000.0,
       "category": "Technology",
-      "imageUrl":  "",
+      "imageUrl":  "assets/images/macbook.png",
       "isFavorite": true
     },{
       "id":  "3",
       "name":  "Google Pixel 9A 128GB|Iris",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 499.0,
       "category": "Technology",
-      "imageUrl":  "",
+      "imageUrl":  "assets/images/pixel.png",
       "isFavorite": true
     },{
       "id":  "4",
       "name":  "Apple Airpods 4 Active Noise Cancellation",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 129.0,
-      "category": "Fruits",
-      "imageUrl":  "",
+      "category": "Technology",
+      "imageUrl":  "assets/images/airpods.png",
       "isFavorite": false
     },{
       "id":  "5",
       "name":  "Oneplus 13 128GB|Tangent",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 600.0,
       "category": "Technology",
-      "imageUrl":  "",
-      "isFavorite": false
+      "imageUrl":  "assets/images/iphone.png",
+      "isFavorite": false,
+      "inStock": false
     },{
       "id":  "6",
       "name":  "Huawei MateX Pro 128GB|Teal",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 659.0,
       "category": "Technology",
-      "imageUrl":  "",
-      "isFavorite": false
+      "imageUrl":  "assets/images/iphone.png",
+      "isFavorite": false,
+      "inStock": false
     },{
       "id":  "7",
       "name":  "Nothing 3a 128GB|Dark",
-      "description": "",
+      "description": "About this item\n· This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned  by Amazon-qualified suppliers.\n· There will be no visible cosmetic imperfections when held at an arm's length. There will be non visible cosmetic imperfections when held at an arm's length.",
       "price": 450.0,
       "category": "Technology",
-      "imageUrl":  "",
-      "isFavorite": false
+      "imageUrl":  "assets/images/iphone.png",
+      "isFavorite": false,
+      "inStock": false
     }
   ]
   ,

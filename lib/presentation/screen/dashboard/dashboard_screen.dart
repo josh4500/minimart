@@ -19,13 +19,15 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with ErrorScreenMixin {
+  bool _setupProviders = false;
   @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_setupProviders) {
+      _setupProviders = true;
       context.read<CartProvider>().loadCart();
       context.read<UserProvider>().loadUser();
-    });
+    }
   }
 
   @override
@@ -67,9 +69,9 @@ class _DashboardScreenState extends State<DashboardScreen>
             BottomNavigationBarItem(
               tooltip: S.of(context).cart,
               label: S.of(context).cart,
-              activeIcon: Selector<CartProvider, int>(
-                selector: (_, cartProvider) => cartProvider.itemCount,
-                builder: (_, int count, _) {
+              activeIcon: Consumer<CartProvider>(
+                builder: (_, cartProvider, _) {
+                  final count = cartProvider.itemCount;
                   return NavIcon(
                     MinimartIcons.cart_outlined,
                     color: context.theme.appColors.selected,
@@ -77,9 +79,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                   );
                 },
               ),
-              icon: Selector<CartProvider, int>(
-                selector: (_, cartProvider) => cartProvider.itemCount,
-                builder: (_, int count, _) {
+              icon: Consumer<CartProvider>(
+                builder: (_, cartProvider, _) {
+                  final count = cartProvider.itemCount;
                   return NavIcon(
                     MinimartIcons.cart_outlined,
                     badgeCount: count > 0 ? count : null,

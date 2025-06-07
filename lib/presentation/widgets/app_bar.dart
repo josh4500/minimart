@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minimart/generated/l10n.dart' show S;
+import 'package:minimart/presentation/constants.dart';
 import 'package:minimart/presentation/providers.dart';
 import 'package:minimart/presentation/themes.dart';
 import 'package:provider/provider.dart';
@@ -42,26 +43,37 @@ class MinimartAppBar extends StatelessWidget {
                       builder: (_, String? deliveryAddress, _) {
                         if (deliveryAddress == null) return const SizedBox();
                         return Column(
-                          spacing: 8,
+                          spacing: 4,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(S.of(context).deliveryAddress),
-                            Text(deliveryAddress),
+                            Text(
+                              S.of(context).deliveryAddress,
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.grey700,
+                              ),
+                            ),
+                            Text(
+                              deliveryAddress,
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.grey700,
+                              ),
+                            ),
                           ],
                         );
                       },
                     ),
                   ),
                   SizedBox(
-                    width: 72,
+                    width: AppValues.LOGO_SIZE,
                     child: Align(
                       alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          MinimartIcons.notification_outlined,
-                          color: context.theme.appColors.foreground,
-                        ),
+                      child: Icon(
+                        MinimartIcons.notification_outlined,
+                        color: context.theme.appColors.foreground,
                       ),
                     ),
                   ),

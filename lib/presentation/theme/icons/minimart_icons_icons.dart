@@ -12,6 +12,10 @@
 ///       - asset: fonts/MinimartIcons.ttf
 ///
 /// 
+/// * Entypo, Copyright (C) 2012 by Daniel Bruce
+///         Author:    Daniel Bruce
+///         License:   SIL (http://scripts.sil.org/OFL)
+///         Homepage:  http://www.entypo.com
 ///
 import 'package:flutter/widgets.dart';
 
@@ -28,9 +32,9 @@ class MinimartIcons {
   static const IconData profile_outlined = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData add_outlined = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData fav_filled = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData minus = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData notification_outlined = IconData(0xe808, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData fav_outlined = IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData minus_outlined = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData chevron_left = IconData(0xe80b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData close_outlined = IconData(0xe80c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

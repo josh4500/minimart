@@ -26,4 +26,18 @@ final class User {
   final String name;
   final String email;
   String deliveryAddress;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is User &&
+          runtimeType == other.runtimeType &&
+          id == other.id &&
+          name == other.name &&
+          email == other.email &&
+          deliveryAddress == other.deliveryAddress;
+
+  @override
+  int get hashCode =>
+      id.hashCode ^ name.hashCode ^ email.hashCode ^ deliveryAddress.hashCode;
 }

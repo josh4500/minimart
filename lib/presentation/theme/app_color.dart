@@ -9,6 +9,7 @@ abstract final class AppColors {
   static const Color grey = Color(0xFF999999);
   static const Color grey100 = Color(0xFFF6F5F8);
   static const Color grey200 = Color(0xFFE2E8F0);
+  static const Color grey300 = Color(0xFFCBD5E1);
   static const Color grey500 = Color(0xFF64748B);
   static const Color grey700 = Color(0xFF334155);
 
@@ -16,7 +17,7 @@ abstract final class AppColors {
   static const Color pink = Color(0xFFFF2D55);
 
   static final ThemeVariant<Color> accent = ThemeVariant.value(
-    const Color(0xFF60B5FF),
+    const Color(0xFFE2E8F0),
   );
 
   static final ThemeVariant<Color> active = ThemeVariant.value(

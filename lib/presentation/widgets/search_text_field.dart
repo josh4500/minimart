@@ -16,6 +16,7 @@ class MinimartSearchTextField extends StatelessWidget {
       textInputAction: TextInputAction.search,
       decoration: InputDecoration(
         hintText: S.of(context).search,
+        hintStyle: const TextStyle(color: AppColors.grey300),
         contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
         prefixIcon: const Padding(
           padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10),
@@ -23,11 +24,11 @@ class MinimartSearchTextField extends StatelessWidget {
         ),
         prefixIconConstraints: const BoxConstraints.tightFor(width: 36),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(5),
           borderSide: BorderSide(color: context.theme.appColors.accent),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(5),
           borderSide: BorderSide(color: context.theme.appColors.accent),
         ),
       ),
