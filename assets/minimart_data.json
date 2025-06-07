@@ -1,0 +1,76 @@
+{
+  "products":[
+    {
+      "id":  "1",
+      "name":  "Apple iPhone 16 128GB|Teal",
+      "description": "",
+      "price": 700.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": false
+    },{
+      "id":  "2",
+      "name":  "M4 Macbook Air 13 256GB|Sky blue",
+      "description": "",
+      "price": 1000.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": true
+    },{
+      "id":  "3",
+      "name":  "Google Pixel 9A 128GB|Iris",
+      "description": "",
+      "price": 499.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": true
+    },{
+      "id":  "4",
+      "name":  "Apple Airpods 4 Active Noise Cancellation",
+      "description": "",
+      "price": 129.0,
+      "category": "Fruits",
+      "imageUrl":  "",
+      "isFavorite": false
+    },{
+      "id":  "5",
+      "name":  "Oneplus 13 128GB|Tangent",
+      "description": "",
+      "price": 600.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": false
+    },{
+      "id":  "6",
+      "name":  "Huawei MateX Pro 128GB|Teal",
+      "description": "",
+      "price": 659.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": false
+    },{
+      "id":  "7",
+      "name":  "Nothing 3a 128GB|Dark",
+      "description": "",
+      "price": 450.0,
+      "category": "Technology",
+      "imageUrl":  "",
+      "isFavorite": false
+    }
+  ]
+  ,
+  "cart": {
+    "items": [
+      {"productId":  "1", "quantity":  2},
+      {"productId":  "2", "quantity":  1},
+      {"productId":  "3", "quantity":  4},
+      {"productId":  "4", "quantity":  7}
+    ]
+  },
+  "user": {
+    "id": "user1",
+    "name": "Ajibola Akinmosin",
+    "email": "jibo.ajosh45@gmail.com",
+    "deliveryAddress": "Umuezike Road, Oyo State"
+  }
+}

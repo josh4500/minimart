@@ -21,5 +21,51 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "addToCart": MessageLookupByLibrary.simpleMessage("Add to cart"),
+    "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "checkout": MessageLookupByLibrary.simpleMessage("Checkout"),
+    "currencySymbol": MessageLookupByLibrary.simpleMessage("\$"),
+    "deliveryAddress": MessageLookupByLibrary.simpleMessage("Delivery Address"),
+    "failedToLoadCart": MessageLookupByLibrary.simpleMessage(
+      "Failed to load cart",
+    ),
+    "failedToLoadCategoryProducts": MessageLookupByLibrary.simpleMessage(
+      "Failed to load category products",
+    ),
+    "failedToLoadImage": MessageLookupByLibrary.simpleMessage(
+      "Failed to load image",
+    ),
+    "failedToLoadProducts": MessageLookupByLibrary.simpleMessage(
+      "Failed to load products",
+    ),
+    "failedToLoadUserData": MessageLookupByLibrary.simpleMessage(
+      "Failed to load user data",
+    ),
+    "failedToUpdateAddress": MessageLookupByLibrary.simpleMessage(
+      "Failed to update address",
+    ),
+    "failedToUpdateCart": MessageLookupByLibrary.simpleMessage(
+      "Failed to update cart",
+    ),
+    "favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "inStock": MessageLookupByLibrary.simpleMessage("In stock"),
+    "locale": MessageLookupByLibrary.simpleMessage("en_US"),
+    "noProductInCart": MessageLookupByLibrary.simpleMessage(
+      "No product in cart",
+    ),
+    "orderInfo": MessageLookupByLibrary.simpleMessage("Order Info"),
+    "outOfStock": MessageLookupByLibrary.simpleMessage("Out of stock"),
+    "productNotFound": MessageLookupByLibrary.simpleMessage(
+      "Product not found",
+    ),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
+    "searchFailed": MessageLookupByLibrary.simpleMessage("Search failed"),
+    "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
+    "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
+    "total": MessageLookupByLibrary.simpleMessage("Total"),
+    "yourCart": MessageLookupByLibrary.simpleMessage("Your Cart"),
+  };
 }
