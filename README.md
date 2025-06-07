@@ -16,12 +16,13 @@ A sleek, modern e-commerce application built with Flutter. This project serves a
 
 ## 📸 Screenshots
 
-|                             Screen                             |
-|:--------------------------------------------------------------:|
-|  ![HomeScreen](screenshots/Screenshot_2025-06-07_194849.png)   |
-| ![ProductScreen](screenshots/Screenshot_2025-06-07_194912.png) |
-|  ![CartScreen](screenshots/Screenshot_2025-06-07_194957.png)   |
-|   ![Recording](screenshots/Recording_2025-06-07_195215.mp4)    |
+|                              Screen                              |
+|:----------------------------------------------------------------:|
+|   ![HomeScreen](screenshots/Screenshot_2025-06-07_194849.png)    |
+|  ![ProductScreen](screenshots/Screenshot_2025-06-07_194912.png)  |
+| ![ProductScreen 2](screenshots/Screenshot_2025-06-07_200436.png) |
+|   ![CartScreen](screenshots/Screenshot_2025-06-07_194957.png)    |
+|    ![Recording](screenshots/Recording_2025-06-07_195215.mp4)     |
 
 -----
 
